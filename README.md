@@ -32,7 +32,8 @@ Main.javaファイル内は編集しないようにお願いします。
 
 ## 時間内に終わった人
 
-SourterImplements以外とは違うアルゴリズムでソートしてみよう。
+SourterImplementsとは別のソートアルゴリズムを考えて
+実際に実装してみよう。
 
 Ⅰ．package jp.co.adglobe.sorter.implement内部にクラスを作る
 
