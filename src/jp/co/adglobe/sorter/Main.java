@@ -1,10 +1,10 @@
-package jp.co.adglobe.sorter.implement;
+package jp.co.adglobe.sorter;
 
 import java.io.FileInputStream;
 import java.math.BigDecimal;
 import java.util.Properties;
 
-import jp.co.adglobe.sorter.Sorter;
+import jp.co.adglobe.sorter.implement.SorterCreater;
 
 public class Main {
 	public static void main(String[] args) {
@@ -15,15 +15,13 @@ public class Main {
 			String[] filepaths = new String[3];
 
 			prop.load(new FileInputStream(configfile));
-			filepaths[0] = prop.getProperty("filepath1");
-			filepaths[1] = prop.getProperty("filepath2");
-			filepaths[2] = prop.getProperty("filepath3");
+			filepaths[0] = prop.getProperty("filename1");
+			filepaths[1] = prop.getProperty("filename2");
+			filepaths[2] = prop.getProperty("filename3");
 			String classname = prop.getProperty("classname");
-
 
 			SorterCreater sc = new SorterCreater(classname);
 			Sorter s = sc.create();
-
 
 			long startTime = System.currentTimeMillis();
 
@@ -39,8 +37,7 @@ public class Main {
 			System.out.println("実行時間は【" + time.divide(thousand) + "秒】です。");
 
 		} catch (ClassNotFoundException cnfe) {
-			// System.out.println("クラス名が不正です。");
-			cnfe.printStackTrace();
+			System.out.println("クラス名が不正です。");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

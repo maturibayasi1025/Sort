@@ -12,7 +12,9 @@ SouterImplements.javaのdoexec()内に以下の処理を記述してください
 
 ファイルに記述された10万個の数字列をソートし、
 
-出力先ディレクトリにテキストファイルをで出力してください。
+出力先ディレクトリ(data/output)にテキストファイルをで出力してください。
+
+出力ファイル名の形式は [入力ファイル名]_sorted.txt とします。
 
 入力ファイルと同様区切り文字はCRLFとします。
 
@@ -50,7 +52,12 @@ class OtherMethodSourter implements Sorter {
 Ⅲ. doexecメソッドを記述
 ```java
 class OtherMethodSourter implements Sorter {
-    
+
+	// データの出力先ディレクトリ
+	private static final String OUTPUT_DIR = "data/output/";
+	// 入力データの格納ディレクトリ
+	private static final String INPUT_DIR = "data/input/";
+
     public void doexec(String filepath) {
     // 処理を記述
     }
