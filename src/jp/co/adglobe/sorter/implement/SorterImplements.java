@@ -1,6 +1,8 @@
-package jp.co.adglobe.sort;
+package jp.co.adglobe.sorter.implement;
 
-class Sorter {
+import jp.co.adglobe.sorter.Sorter;
+
+class SorterImplements implements Sorter {
 
 	// データの出力先ディレクトリ
 	private static final String OUTPUT_DIR = "data/output/";
