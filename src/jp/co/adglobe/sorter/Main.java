@@ -12,12 +12,12 @@ public class Main {
 
 			Properties prop = new Properties();
 			String configfile = "config/.properties";
-			String[] filepaths = new String[3];
+			String[] filenames = new String[3];
 
 			prop.load(new FileInputStream(configfile));
-			filepaths[0] = prop.getProperty("filename1");
-			filepaths[1] = prop.getProperty("filename2");
-			filepaths[2] = prop.getProperty("filename3");
+			filenames[0] = prop.getProperty("filename1");
+			filenames[1] = prop.getProperty("filename2");
+			filenames[2] = prop.getProperty("filename3");
 			String classname = prop.getProperty("classname");
 
 			SorterCreater sc = new SorterCreater(classname);
@@ -25,8 +25,8 @@ public class Main {
 
 			long startTime = System.currentTimeMillis();
 
-			for(String filepath: filepaths) {
-				s.doExec(filepath);
+			for(String filename : filenames) {
+				s.doExec(filename);
 			}
 
 			long milliTime = System.currentTimeMillis() - startTime;
