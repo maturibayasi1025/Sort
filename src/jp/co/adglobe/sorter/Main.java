@@ -8,8 +8,8 @@ import jp.co.adglobe.sorter.implement.SorterCreater;
 
 public class Main {
 	public static void main(String[] args) {
-		try {
 
+		try {
 			Properties prop = new Properties();
 			String configfile = "config/.properties";
 			String[] filenames = new String[3];
